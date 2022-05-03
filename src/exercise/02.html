@@ -24,7 +24,7 @@
     
     const reactElement = React.createElement("h1", {
       className: "container",
-      children: "Hello World"
+      children: [React.createElement("span", null, "Hello"), ' ',React.createElement("span", null,"world")]
     })
     ReactDOM.createRoot(rootElement).render(reactElement)
 
