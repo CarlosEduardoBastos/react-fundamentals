@@ -4,11 +4,10 @@
 <body>
   <div id="root"></div>
 
-  <!-- 🐨 add React and ReactDOM on the page.
-       💰 Here are script tags that'll do the job:
+
   <script src="https://unpkg.com/react@18.1.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18.1.0/umd/react-dom.development.js"></script>
-  -->
+
 
   <script type="module">
     const rootElement = document.getElementById('root')
@@ -22,11 +21,12 @@
     // // This is similar to ReactDOM.createRoot().render()
     // rootElement.append(element)
 
-    const elmentProps = {id: "container", children: "Hello World"}
     
-    const reactElement = React.createElement("h1", elmentProps)
-    const root = ReactDOM.createRoot(rootElement)
-    root.render(reactElement)
+    const reactElement = React.createElement("h1", {
+      className: "container",
+      children: "Hello World"
+    })
+    ReactDOM.createRoot(rootElement).render(reactElement)
 
 
     // 🐨 Please re-implement the regular document.createElement code above
